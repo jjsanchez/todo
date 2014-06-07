@@ -15,6 +15,12 @@ require.config({
     }
 });
 
-require(['models/test-todo.js'], function() {
-    QUnit.start();
-});
+require(
+    [
+        'models/test-todo.js',
+        'views/test-todo.js',
+    ], 
+    function() {
+        QUnit.start();
+    }
+);
