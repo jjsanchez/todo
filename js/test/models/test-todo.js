@@ -1,7 +1,27 @@
-require(['../models/todo.js', 'jquery'], function( core ) {
+require(['../models/todo.js'], function(Todo) {
     module("Todo model");
   
-    test("test", function(){
-        ok( true, "Another trivial test");
+    test("Should have correct default values", function() {
+        var model = new Todo();
+
+        equal(model.get('title'), '');
+        equal(model.get('completed'), false);
     });
+
+    test("Should go to completed from uncompleted when toggled", function() {
+        var model = new Todo({ completed: false });
+
+        model.toggle();
+
+        ok(model.get('completed'));
+    });
+
+    test("Should go to uncompleted from completed when toggled", function() {
+        var model = new Todo({ completed: true });
+
+        model.toggle();
+
+        ok(!model.get('completed'));
+    });
+
 });
