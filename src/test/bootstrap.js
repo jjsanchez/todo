@@ -1,5 +1,5 @@
 require.config({
-    baseUrl: '..',
+    baseUrl: '../main',
 
     paths: {
         'underscore': 'js/lib/underscore',
