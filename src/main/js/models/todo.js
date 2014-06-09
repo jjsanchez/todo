@@ -1,15 +1,19 @@
-define(['backbone'], function(Backbone) {
+(function() {
+    "use strict";
 
-    var Todo = Backbone.Model.extend({
-        defaults: {
-            title: '',
-            completed: false
-        },
+    define(['backbone'], function(Backbone) {
 
-        toggle: function() {
-            this.set('completed', !this.get('completed'));
-        }
+        var Todo = Backbone.Model.extend({
+            defaults: {
+                title: '',
+                completed: false
+            },
+
+            toggle: function() {
+                this.set('completed', !this.get('completed'));
+            }
+        });
+
+        return Todo;
     });
-
-    return Todo;
-});
+})();

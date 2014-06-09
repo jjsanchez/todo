@@ -1,9 +1,12 @@
-define(['backbone', 'text!templates/todoItem.html'], function(Backbone) {
+(function () {
+    "use strict";
 
-    var Todo = Backbone.View.extend({
-        tagName: 'li'
+    define(['backbone', 'text!templates/todoItem.html'], function(Backbone) {
+        
+        var Todo = Backbone.View.extend({
+            tagName: 'li'
+        });
+
+        return Todo;
     });
-
-    return Todo;
-
-});
+})();
