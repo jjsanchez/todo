@@ -1,7 +1,7 @@
-require(['views/todo'], function(Todo) {
+require(['js/views/todo'], function(Todo) {
     module("Todo view");
   
-    test("Shold render on an li node", function() {
+    test("Should render on an li node", function() {
         var view = new Todo();
 
         equal(view.tagName, 'li');

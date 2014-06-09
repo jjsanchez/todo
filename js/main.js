@@ -3,7 +3,8 @@ require.config({
     paths: {
         'underscore': 'lib/underscore',
         'backbone': 'lib/backbone',
-        'jquery': 'lib/jquery'
+        'jquery': 'lib/jquery',
+        'text': 'lib/require/text',
     },
     shim: {
         'underscore': {

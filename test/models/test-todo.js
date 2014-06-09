@@ -1,4 +1,4 @@
-require(['models/todo'], function(Todo) {
+require(['js/models/todo'], function(Todo) {
     module("Todo model");
   
     test("Should have correct default values", function() {
